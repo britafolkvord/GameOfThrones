@@ -1,55 +1,46 @@
-@font-face {
-    font-family: 'game-of-thrones';
-    src: url('/font/Game\ of\ Thrones.ttf') 
-  
-  }
-
-body{
-    overflow: hidden;
-    background-image: none;
+body {
+  overflow: hidden;
+  background-image: none;
 }
 
-section{
-    display: grid;
-    grid-template-columns: repeat(10, auto);
+section {
+  display: grid;
+  grid-template-columns: repeat(10, auto);
 }
 
-section div{
-    background-color: white;
-    height: 100vh;
-    transition: background-color 1.5s;    
+section div {
+  background-color: #ffffff;
+  height: 100vh;
+  transition: background-color 1.5s;
 }
 
-h1{
-    font-size: 5rem;
-    font-family: 'game-of-thrones';
-    line-height: 112px;
-    color: black;
-    position: absolute;
-    top: 40%;
-    left: 5%;
-    opacity: 0;
-    z-index: 2;
+h1 {
+  font-size: 5rem;
+  font-family: "game-of-thrones";
+  line-height: 112px;
+  color: #000000;
+  position: absolute;
+  top: 40%;
+  left: 5%;
+  opacity: 0;
+  z-index: 2;
 }
 
-a{
-    font-size: 3rem;
-    padding: 24px;
-    background-color: black;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 50px;
-    width: 30%;
-    left: 20%;
-    position: absolute;
-    opacity: 0;
-    z-index: 2;
+a {
+  font-size: 3rem;
+  padding: 24px;
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50px;
+  width: 30%;
+  left: 20%;
+  position: absolute;
+  opacity: 0;
+  z-index: 2;
 }
 
-a:hover{
-    transform: scale(1.045);
-    transition: all 0.25s ease-in-out;
+a:hover {
+  transform: scale(1.045);
 }
-
-

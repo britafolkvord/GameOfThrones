@@ -1,330 +1,276 @@
-
-.intro{
-    margin: 0 auto;
-    padding: 32px 24px;
-    max-width: 720px;
-    background: rgba(0,0,0,0.65);
-    
+.intro {
+  margin: 0 auto;
+  padding: 32px 24px;
+  max-width: 720px;
+  background: rgba(0, 0, 0, 0.65);
 }
 
-.selectCharacter{
-    margin: 0 auto;
+.selectCharacter {
+  margin: 0 auto;
 }
 
-.playerTurn{
-    font-size: 2rem;
-    text-shadow: 3px 3px #000000;
-    width: 90%;
-    margin: 24px auto;
+.playerTurn {
+  text-shadow: 3px 3px #000000;
+  width: 90%;
+  margin: 24px auto;
 }
 
-.cards{
-    align-items: flex-start;
+.cards {
+  align-items: flex-start;
 }
 
-.card{
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 32px auto;
-    width: 80%;
-    box-shadow: 4px 6px 6px 4px rgba(0, 0, 0, 0.25);
-    cursor: pointer;
-    background: rgba(0,0,0,0.65);
+.card {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 32px auto;
+  width: 80%;
+  box-shadow: 4px 6px 6px 4px rgba(0, 0, 0, 0.25);
+  background: rgba(0, 0, 0, 0.65);
 }
 
-
-.card:hover{
-    transform: scale(1.035);
-    transition: all 0.25s ease-in-out;
+.img {
+  width: 100%;
 }
 
-.card:disabled:hover{
-    cursor: not-allowed;
-    transform: none;
+.name {
+  width: 100%;
+  text-align: center;
+  color: #ededed;
 }
 
-
-.img{
-    width: 100%;
+.select {
+  display: flex;
+  justify-content: flex-end;
 }
 
-.name{
-    width: 100%;
-    text-align: center;
-    color: #ededed;
-    font-size: 1.4rem;
+.btn-select {
+  background-color: black;
+  margin: 24px 0;
+  width: 50%;
+  color: #ededed;
+  padding: 16px;
+  border-radius: 25px;
 }
 
-  
-.hidden{
-    display: none;
-    opacity: 0;
+.summary {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 720px;
+  background: rgba(0, 0, 0, 0.65);
 }
 
-
-.select{
-    background-color: black;
-    margin: 24px auto;
-    width: 50%;
-    font-size: 1.3rem;
-    color: #ededed; 
-    padding: 16px;
-    box-shadow: 4px 6px 6px 4px rgba(0, 0, 0, 0.15);
-    
+.summary p {
+  font-size: 1.8rem;
 }
 
-.select:hover{
-    transform: scale(1.025);
-    transition: all 0.25s ease-in-out;
-    box-shadow: 4px 6px 6px 4px rgba(0, 0, 0, 0.25);
-
+.padding {
+  padding: 24px;
 }
 
-.summary{
-    width: 100%;
-    margin: 0 auto;
-    max-width: 720px;
-    background: rgba(0,0,0,0.65);
+.btn-row {
+  display: flex;
+  flex-direction: column;
+  float: right;
+  margin-top: 16px;
 }
 
-.summary p{
-    font-size: 1.8rem;
-}
-
-.padding{
-    padding: 24px;
-}
-
-.btn-row{
-    display: flex;
-    flex-direction: column;
-    float: right;
-    margin-top: 16px;
-}
-
-.btn-light{
-    background-color: #ededed;
+.btn-light {
+  background-color: #ededed;
+  color: #000000;
 }
 
 .btn-light,
-.btn-blue{
-    color: #000000;
+.btn-blue {
+  padding: 16px;
+  text-decoration: none;
+  border-radius: 25px;
+  margin: 16px auto;
+}
+
+.btn-blue {
+  background-color: #29527a;
+  color: #ededed;
+  margin-top: 40px;
+  border: none;
+}
+
+.modal-character-content {
+  background-color: #ededed;
+  margin: auto;
+  padding: 8px 16px;
+  border: 1px solid #888;
+  color: black;
+}
+
+.born p,
+.culture p,
+.titles p {
+  margin: 0 8px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .playerTurn {
+    font-size: 2.5rem;
+    text-shadow: 3px 3px #000000;
+  }
+
+  .cards {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+
+  .card {
+    width: 35%;
+    margin: 32px;
+  }
+
+  .modal-character-content {
+    width: 90%;
+    height: 60%;
+    margin-top: 48px;
+  }
+
+  .col {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 60%;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .col-1 {
+    width: 40%;
+  }
+
+  .col-2 {
+    width: 40%;
+  }
+
+  .born p,
+  .culture p,
+  .titles p {
+    margin: 0 8px;
+  }
+
+  .btn-select {
+    width: 30%;
+    margin-top: 88px;
+  }
+
+  .btn-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 48px;
+  }
+
+  .btn-light,
+  .btn-blue {
     padding: 16px;
-    font-size: 1.5rem;
-    text-decoration: none;
-    border-radius: 25px;
-    margin: 16px auto;
-    cursor: pointer;
-}
-
-.btn-blue{
-    background-color: #29527a;
-    color: #ededed;
-    margin-top: 40px;
-    border: none;
-    
-}
-
-.btn-light:hover,
-.btn-blue:hover{
-    transform: scale(1.045);
-    transition: all 0.25s ease-in-out;
-}
-
-
-.modal-character-content{
-    background-color: #ededed;
-    margin: auto;
-    padding: 8px 16px;
-    border: 1px solid #888;
-    color: black;
-}
-
-h4{
-    font-size: 1.6rem;
-    margin: 16px 0;
-}
-
-.bold{
-    font-size: 1.4rem;
-    margin: 8px 0;
-}
-
-.col-2 p{
-    margin: 0;
-}
-
-
-
-@media only screen and (min-width: 768px) and (max-width: 1023px){
-    
-    .playerTurn{
-        font-size: 2.5rem;
-        text-shadow: 3px 3px #000000;
-    }
-    
-    .cards{
-        width: 90%;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin: 0 auto;
-        
-    }
-
-    .card{
-        width: 35%;
-        margin: 32px;
-    }
-
-    .modal-character-content{
-        width: 90%;
-        height: 65%;
-        margin-top: 48px;
-    }
-
-    .col{
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        height: 60%;
-        justify-content: space-evenly;
-        align-items: center;
-    }
-
-    .col-1{
-        width: 40%;
-    }
-
-    .col-2{
-        width: 40%;
-        
-    }
-
-
-    .select{
-        float: right;
-        width: 30%;
-        margin-top: 112px;
-    }
-
-    .btn-row{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: baseline;
-        margin-top: 48px;
-    }
-
-    .btn-light,
-    .btn-blue{
-    padding: 16px;
-    font-size: 1.5rem;
     text-decoration: none;
     border-radius: 25px;
     margin: 16px;
-    cursor: pointer;
+  }
 }
-}
-
 
 @media only screen and (min-width: 1024px) {
+  .playerTurn {
+    font-size: 2.5rem;
+    text-shadow: 3px 3px #000000;
+  }
 
-    .playerTurn{
-        font-size: 2.5rem;
-        text-shadow: 3px 3px #000000;
-    }
+  .modal-character-content {
+    width: 50%;
+    height: 50%;
+    margin: 80px auto;
+  }
 
-    .modal-character-content{
-        width: 50%;
-        height: 50%;
-        margin: 80px auto;
-    }
+  .col {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 60%;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+  }
 
-    .col{
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        height: 60%;
-        justify-content: space-evenly;
-        align-items: center;
-        margin: 0 auto;
-    }
+  .col-2 {
+    width: 50%;
+  }
 
-    .col-2{
-        width: 50%;
-    }
+  .col-1 {
+    width: 40%;
+    height: 100%;
+  }
 
-    .col-1{
-        width: 40%;
-        height: 100%;
-    }
+  .col-1 img {
+    height: 100%;
+  }
 
-    .col-1 img{
-        height: 100%;
-    }
+  .btn-select {
+    width: 30%;
+    margin-top: 48px;
+  }
+  .cards {
+    width: 85%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
 
-    .select{
-        float: right;
-        width: 30%;
-        margin-top: 48px;
-    }
-    .cards{
-        width: 85%;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        margin: 0 auto;
-    }
+  .card {
+    width: 18%;
+  }
 
-    .card{
-        width: 18%;
-    }
+  img {
+    margin: 0;
+    width: 100%;
+  }
 
-    img{
-        margin: 0;
-        width: 100%;
+  .born,
+  .culture,
+  .titles {
+    display: flex;
+    flex-direction: row;
+  }
 
-    }
+  .titles,
+  .born {
+    align-items: baseline;
+  }
 
-    .born,
-    .culture,
-    .titles{
-        display: flex;
-        flex-direction: row; 
-    }
+  .culture {
+    align-items: center;
+  }
 
-    .titles,
-    .born{
-        align-items: baseline;
-    }
+  .bold {
+    margin: 8px;
+  }
 
-    .culture{
-        align-items: center;  
-    }
+  .btn-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 48px;
+  }
 
-    .bold{
-        margin: 8px;
-    }
-
-    .btn-row{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: baseline;
-        margin-top: 48px;
-    }
-
-    .btn-light,
-    .btn-blue{
+  .btn-light,
+  .btn-blue {
     padding: 16px;
     font-size: 1.5rem;
     text-decoration: none;
     border-radius: 25px;
     margin: 16px;
-    cursor: pointer;
-}
+  }
 }

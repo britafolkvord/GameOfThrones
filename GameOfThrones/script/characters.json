@@ -1,445 +1,93 @@
 {
-    "data": [
-        {
-            "url": "https://anapioficeandfire.com/api/characters/148",
-            "name": "Arya Stark",
-            "gender": "Female",
-            "culture": "Northmen",
-            "born": "In 289 AC, at Winterfell",
-            "img": "./img/arya.svg",
-            "sigil": "./img/stark2.svg",
-            "died": "",
-            "titles": [
-                "Princess"
-            ],
-            "aliases": [
-                "Arya Horseface",
-                "Arya Underfoot",
-                "Arry",
-                "Lumpyface",
-                "Lumpyhead",
-                "Stickboy",
-                "Weasel",
-                "Nymeria",
-                "Squan",
-                "Saltb",
-                "Cat of the Canaly",
-                "Bets",
-                "The Blind Girh",
-                "The Ugly Little Girl",
-                "Mercedenl",
-                "Mercye"
-            ],
-            "father": "",
-            "mother": "",
-            "spouse": "",
-            "allegiances": [
-                "https://anapioficeandfire.com/api/houses/362"
-            ],
-            "books": [],
-            "povBooks": [
-                "https://anapioficeandfire.com/api/books/1",
-                "https://anapioficeandfire.com/api/books/2",
-                "https://anapioficeandfire.com/api/books/3",
-                "https://anapioficeandfire.com/api/books/5",
-                "https://anapioficeandfire.com/api/books/8"
-            ],
-            "tvSeries": [
-                "Season 1",
-                "Season 2",
-                "Season 3",
-                "Season 4",
-                "Season 5",
-                "Season 6"
-            ],
-            "playedBy": [
-                "Maisie Williams"
-            ]
-        },
-        {
-            "url": "https://anapioficeandfire.com/api/characters/232",
-            "name": "Catelyn Stark",
-            "gender": "Female",
-            "culture": "Rivermen",
-            "born": "In 264 AC, at Riverrun",
-            "died": "In 299 AC, at the Twins",
-            "img": "./img/catelyn.svg",
-            "sigil": "./img/stark3.svg",
-            "titles": [
-                "Lady of Winterfell"
-            ],
-            "aliases": [
-                "Catelyn Tully",
-                "Lady Stoneheart",
-                "The Silent Sistet",
-                "Mother Mercilesr",
-                "The Hangwomans"
-            ],
-            "father": "",
-            "mother": "",
-            "spouse": "https://anapioficeandfire.com/api/characters/339",
-            "allegiances": [
-                "https://anapioficeandfire.com/api/houses/362",
-                "https://anapioficeandfire.com/api/houses/395"
-            ],
-            "books": [
-                "https://anapioficeandfire.com/api/books/5",
-                "https://anapioficeandfire.com/api/books/8"
-            ],
-            "povBooks": [
-                "https://anapioficeandfire.com/api/books/1",
-                "https://anapioficeandfire.com/api/books/2",
-                "https://anapioficeandfire.com/api/books/3"
-            ],
-            "tvSeries": [
-                "Season 1",
-                "Season 2",
-                "Season 3"
-            ],
-            "playedBy": [
-                "Michelle Fairley"
-            ]
-        },
-        {
-            "url": "https://anapioficeandfire.com/api/characters/583",
-            "name": "Jon Snow",
-            "gender": "Male",
-            "culture": "Northmen",
-            "born": "In 283 AC",
-            "img": "./img/jonsnow.svg",
-            "sigil": "./img/stark1.svg",
-            "died": "",
-            "titles": [
-                "Lord Commander of the Night's Watch"
-            ],
-            "aliases": [
-                "Lord Snow",
-                "Ned Stark's Bastard",
-                "The Snow of Winterfell",
-                "The Crow-Come-Over",
-                "The 998th Lord Commander of the Night's Watch",
-                "The Bastard of Winterfell",
-                "The Black Bastard of the Wall",
-                "Lord Crow"
-            ],
-            "father": "",
-            "mother": "",
-            "spouse": "",
-            "allegiances": [
-                "https://anapioficeandfire.com/api/houses/362"
-            ],
-            "books": [
-                "https://anapioficeandfire.com/api/books/5"
-            ],
-            "povBooks": [
-                "https://anapioficeandfire.com/api/books/1",
-                "https://anapioficeandfire.com/api/books/2",
-                "https://anapioficeandfire.com/api/books/3",
-                "https://anapioficeandfire.com/api/books/8"
-            ],
-            "tvSeries": [
-                "Season 1",
-                "Season 2",
-                "Season 3",
-                "Season 4",
-                "Season 5",
-                "Season 6"
-            ],
-            "playedBy": [
-                "Kit Harington"
-            ]
-        },
-        {
-            "url": "https://anapioficeandfire.com/api/characters/957",
-            "name": "Sansa Stark",
-            "gender": "Female",
-            "culture": "Northmen",
-            "born": "In 286 AC, at Winterfell",
-            "img": "./img/sansa.svg",
-            "sigil": "./img/stark4.svg",
-            "died": "",
-            "titles": [
-                "Princess"
-            ],
-            "aliases": [
-                "Little bird",
-                "Alayne Stone",
-                "Jonquil"
-            ],
-            "father": "",
-            "mother": "",
-            "spouse": "https://anapioficeandfire.com/api/characters/1052",
-            "allegiances": [
-                "https://anapioficeandfire.com/api/houses/10",
-                "https://anapioficeandfire.com/api/houses/362"
-            ],
-            "books": [
-                "https://anapioficeandfire.com/api/books/8"
-            ],
-            "povBooks": [
-                "https://anapioficeandfire.com/api/books/1",
-                "https://anapioficeandfire.com/api/books/2",
-                "https://anapioficeandfire.com/api/books/3",
-                "https://anapioficeandfire.com/api/books/5"
-            ],
-            "tvSeries": [
-                "Season 1",
-                "Season 2",
-                "Season 3",
-                "Season 4",
-                "Season 5",
-                "Season 6"
-            ],
-            "playedBy": [
-                "Sophie Turner"
-            ]
-        },
-        {
-            "url": "https://anapioficeandfire.com/api/characters/238",
-            "name": "Cersei Lannister",
-            "gender": "Female",
-            "culture": "Westerman",
-            "born": "In 266 AC, at Casterly Rock",
-            "img": "./img/cersei.svg",
-            "sigil": "./img/lannister2.svg",
-            "died": "",
-            "titles": [
-                "Light of the West",
-                "Queen Dowager",
-                "Protector of the Realm",
-                "Queen Regent"
-            ],
-            "aliases": [
-                "Brotherfuckerthe bitch queen"
-            ],
-            "father": "",
-            "mother": "",
-            "spouse": "https://anapioficeandfire.com/api/characters/901",
-            "allegiances": [
-                "https://anapioficeandfire.com/api/houses/229"
-            ],
-            "books": [
-                "https://anapioficeandfire.com/api/books/1",
-                "https://anapioficeandfire.com/api/books/2",
-                "https://anapioficeandfire.com/api/books/3"
-            ],
-            "povBooks": [
-                "https://anapioficeandfire.com/api/books/5",
-                "https://anapioficeandfire.com/api/books/8"
-            ],
-            "tvSeries": [
-                "Season 1",
-                "Season 2",
-                "Season 3",
-                "Season 4",
-                "Season 5",
-                "Season 6"
-            ],
-            "playedBy": [
-                "Lena Headey"
-            ]
-        },
-        {
-            "url": "https://anapioficeandfire.com/api/characters/1052",
-            "name": "Tyrion Lannister",
-            "gender": "Male",
-            "culture": "Westerman",
-            "born": "In 273 AC, at Casterly Rock",
-            "img": "./img/tyrion.svg",
-            "sigil": "./img/lannister1.svg",
-            "died": "",
-            "titles": [
-                "Acting Hand of the King (former)",
-                "Master of Coin (former)"
-            ],
-            "aliases": [
-                "The Imp",
-                "Halfman",
-                "The boyman",
-                "Giant of Lannister",
-                "Lord Tywin's Doom",
-                "Lord Tywin's Bane",
-                "Yollo",
-                "Hugor Hill",
-                "No-Nose",
-                "Freak",
-                "Dwarf"
-            ],
-            "father": "",
-            "mother": "",
-            "spouse": "https://anapioficeandfire.com/api/characters/2044",
-            "allegiances": [
-                "https://anapioficeandfire.com/api/houses/229"
-            ],
-            "books": [
-                "https://anapioficeandfire.com/api/books/5",
-                "https://anapioficeandfire.com/api/books/11"
-            ],
-            "povBooks": [
-                "https://anapioficeandfire.com/api/books/1",
-                "https://anapioficeandfire.com/api/books/2",
-                "https://anapioficeandfire.com/api/books/3",
-                "https://anapioficeandfire.com/api/books/8"
-            ],
-            "tvSeries": [
-                "Season 1",
-                "Season 2",
-                "Season 3",
-                "Season 4",
-                "Season 5",
-                "Season 6"
-            ],
-            "playedBy": [
-                "Peter Dinklage"
-            ]
-        },
-        {
-            "url": "https://anapioficeandfire.com/api/characters/1303",
-            "name": "Daenerys Targaryen",
-            "gender": "Female",
-            "culture": "Valyrian",
-            "born": "In 284 AC, at Dragonstone",
-            "img": "./img/daenerys.svg",
-            "sigil": "./img/targaryen.svg",
-            "died": "",
-            "titles": [
-                "Queen of the Andals and the Rhoynar and the First Men, Lord of the Seven Kingdoms",
-                "Khaleesi of the Great Grass Sea",
-                "Breaker of Shackles/Chains"
-            ],
-            "aliases": [
-                "Dany",
-                "Daenerys Stormborn",
-                "The Unburnt",
-                "Mother of Dragons",
-                "Mother",
-                "Mhysa",
-                "The Silver Queen",
-                "Silver Lady",
-                "Dragonmother",
-                "The Dragon Queen",
-                "The Mad King's daughter"
-            ],
-            "father": "",
-            "mother": "",
-            "spouse": "https://anapioficeandfire.com/api/characters/1346",
-            "allegiances": [
-                "https://anapioficeandfire.com/api/houses/378"
-            ],
-            "books": [
-                "https://anapioficeandfire.com/api/books/5"
-            ],
-            "povBooks": [
-                "https://anapioficeandfire.com/api/books/1",
-                "https://anapioficeandfire.com/api/books/2",
-                "https://anapioficeandfire.com/api/books/3",
-                "https://anapioficeandfire.com/api/books/8"
-            ],
-            "tvSeries": [
-                "Season 1",
-                "Season 2",
-                "Season 3",
-                "Season 4",
-                "Season 5",
-                "Season 6"
-            ],
-            "playedBy": [
-                "Emilia Clarke"
-            ]
-        },
-        {
-            "url": "https://anapioficeandfire.com/api/characters/1709",
-            "name": "Missandei",
-            "gender": "Female",
-            "culture": "Naathi",
-            "born": "In 288 AC or 289 AC, at Naath",
-            "img": "./img/missandei.svg",
-            "sigil": "./img/naath.svg",
-            "died": "",
-            "titles": [
-                "None"
-            ],
-            "aliases": [
-                ""
-            ],
-            "father": "",
-            "mother": "",
-            "spouse": "",
-            "allegiances": [
-                "https://anapioficeandfire.com/api/houses/378"
-            ],
-            "books": [
-                "https://anapioficeandfire.com/api/books/3",
-                "https://anapioficeandfire.com/api/books/5",
-                "https://anapioficeandfire.com/api/books/8"
-            ],
-            "povBooks": [],
-            "tvSeries": [
-                "Season 3",
-                "Season 4",
-                "Season 5",
-                "Season 6"
-            ],
-            "playedBy": [
-                "Nathalie Emmanuel"
-            ]
-        },
-        {
-            "url": "https://anapioficeandfire.com/api/characters/743",
-            "name": "Melisandre",
-            "gender": "Female",
-            "culture": "Asshai",
-            "born": "At Unknown",
-            "img": "./img/melisandre.svg",
-            "sigil": "./img/redpriestess.svg",
-            "died": "",
-            "titles": [
-                "None"
-            ],
-            "aliases": [
-                "The Red Priestess",
-                "The Red Woman",
-                "The King's Red Shadow",
-                "Lady Red",
-                "Lot Seven"
-            ],
-            "father": "",
-            "mother": "",
-            "spouse": "",
-            "allegiances": [],
-            "books": [
-                "https://anapioficeandfire.com/api/books/2",
-                "https://anapioficeandfire.com/api/books/3",
-                "https://anapioficeandfire.com/api/books/5"
-            ],
-            "povBooks": [
-                "https://anapioficeandfire.com/api/books/8"
-            ],
-            "tvSeries": [
-                "Season 2",
-                "Season 3",
-                "Season 4",
-                "Season 5",
-                "Season 6"
-            ],
-            "playedBy": [
-                "Carice van Houten"
-            ]
-        },
-        {
-            "url": "",
-            "name": "The Night King",
-            "gender": "Male",
-            "culture": "White Walker",
-            "born": "Was created in 10,000 BC",
-            "died": "In 305 AC, at Winterfell",
-            "img": "./img/nightking.svg",
-            "sigil": "./img/whitewalker.svg",
-            "titles": "None",
-            "playedBy": [
-                " Richard Brake (Season 4-5)",
-                " Vladimir Furdik (Season 6-8)"
-            ]
-        }
-    ]
+  "data": [
+    {
+      "name": "Arya Stark",
+      "culture": "Northmen",
+      "born": "In 289 AC, at Winterfell",
+      "img": "./img/arya.svg",
+      "sigil": "./img/stark2.svg",
+      "titles": ["Princess"]
+    },
+    {
+      "name": "Catelyn Stark",
+      "culture": "Rivermen",
+      "born": "In 264 AC, at Riverrun",
+      "img": "./img/catelyn.svg",
+      "sigil": "./img/stark3.svg",
+      "titles": ["Lady of Winterfell"]
+    },
+    {
+      "name": "Jon Snow",
+      "culture": "Northmen",
+      "born": "In 283 AC",
+      "img": "./img/jonsnow.svg",
+      "sigil": "./img/stark1.svg",
+      "titles": ["Lord Commander of the Night's Watch"]
+    },
+    {
+      "name": "Sansa Stark",
+      "culture": "Northmen",
+      "born": "In 286 AC, at Winterfell",
+      "img": "./img/sansa.svg",
+      "sigil": "./img/stark4.svg",
+      "titles": ["Princess"]
+    },
+    {
+      "name": "Cersei Lannister",
+      "culture": "Westerman",
+      "born": "In 266 AC, at Casterly Rock",
+      "img": "./img/cersei.svg",
+      "sigil": "./img/lannister2.svg",
+      "titles": [
+        "Light of the West",
+        "Queen Dowager",
+        "Protector of the Realm",
+        "Queen Regent"
+      ]
+    },
+    {
+      "name": "Tyrion Lannister",
+      "culture": "Westerman",
+      "born": "In 273 AC, at Casterly Rock",
+      "img": "./img/tyrion.svg",
+      "sigil": "./img/lannister1.svg",
+      "titles": ["Acting Hand of the King (former)", "Master of Coin (former)"]
+    },
+    {
+      "name": "Daenerys Targaryen",
+      "culture": "Valyrian",
+      "born": "In 284 AC, at Dragonstone",
+      "img": "./img/daenerys.svg",
+      "sigil": "./img/targaryen.svg",
+      "titles": [
+        "Queen of the Andals and the Rhoynar and the First Men, Lord of the Seven Kingdoms",
+        "Khaleesi of the Great Grass Sea",
+        "Breaker of Shackles/Chains"
+      ]
+    },
+    {
+      "name": "Missandei",
+      "culture": "Naathi",
+      "born": "In 288 AC or 289 AC, at Naath",
+      "img": "./img/missandei.svg",
+      "sigil": "./img/naath.svg",
+      "titles": "None"
+    },
+    {
+      "name": "Melisandre",
+      "culture": "Asshai",
+      "born": "At Unknown",
+      "img": "./img/melisandre.svg",
+      "sigil": "./img/redpriestess.svg",
+      "titles": "None"
+    },
+    {
+      "name": "The Night King",
+      "culture": "White Walker",
+      "born": "Was created in 10,000 BC",
+      "img": "./img/nightking.svg",
+      "sigil": "./img/whitewalker.svg",
+      "titles": "None"
+    }
+  ]
 }

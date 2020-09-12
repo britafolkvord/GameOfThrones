@@ -1,168 +1,132 @@
-
-main{
-    margin-top: 40px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    
+main {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-
-
+.loader:before {
+  top: 60%;
+}
 
 .p1-rollDice,
-.p2-rollDice{
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    justify-content: center;
-    
-} 
+.p2-rollDice {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  justify-content: center;
+}
 
 .p1-character,
-.p2-character{
-    text-align: center;
+.p2-character {
+  text-align: center;
 }
 
 .p1-character img,
-.p2-character img{
-    width: 35%;
-    margin: 0 auto;
-    border-radius: 80px;
+.p2-character img {
+  width: 35%;
+  margin: 0 auto;
+  border-radius: 80px;
 }
 
 .p1-rollDice img,
-.p2-rollDice img{
-    width: 30%;
-    margin: 0 auto;
-   
+.p2-rollDice img {
+  width: 30%;
+  margin: 0 auto;
 }
 
 .p1-roll,
-.p2-roll{
-    background-color: #ededed;
+.p2-roll {
+  background-color: #ededed;
 }
 
-button{
-    width: 40%;
-    padding: 16px;
-    font-size: 1.4rem;
-    border-radius: 25px;
-    margin: 0 auto;
-    cursor: pointer;
+button {
+  width: 40%;
+  padding: 16px;
+  border-radius: 25px;
+  margin: 0 auto;
 }
 
-button:disabled{
-    cursor: not-allowed;
-    
+.btn-play {
+  float: right;
+  color: #ededed;
+  margin: 16px auto;
+  background-color: #29527a;
 }
 
-.btn-play{
-    float: right;
-    color: #ededed;
-    margin: 16px auto;
-    background-color: #29527a;
+.board {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+  margin: 0 auto;
 }
 
-.board{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap-reverse;
-    margin: 0 auto;
-    
-    
-    
+.tile {
+  width: 145px;
+  height: 145px;
+  border: 2.5px solid #c0c0c0;
+  color: #c0c0c0;
+  font-size: 24px;
+  background: rgba(0, 0, 0, 0.85);
 }
 
-.tile{
-    width: 145px;
-    height: 145px;
-    border: 2.5px solid silver;
-    color: silver;
-    font-size: 24px;
-    background: rgba(0,0,0,0.85);
-    
+.tile h3 {
+  color: #c0c0c0;
+  margin: 0;
+}
+.tile span {
+  position: absolute;
+  margin-left: 8px;
 }
 
-.tile h3{
-    color: silver;
-    margin: 0;
-    
-}
-.tile span{
-    position: absolute;
-    margin-left: 8px;
+.row {
+  display: flex;
+  flex-direction: row;
 }
 
-.row{
-    display: flex;
-    flex-direction: row;
+.reverse {
+  display: flex;
+  flex-direction: row-reverse;
 }
-
-.reverse{
-    display: flex;
-    flex-direction: row-reverse;
-}
-
-
 
 .p1token,
 .p2token {
-    position: relative;
-    top: 30%;
-    width: 35%;
-    margin: 8px;
-    border-radius: 25px;
-    
-}
-
-.modal-content{
-    background-color: #ededed;
-    margin: 80px auto;
-    padding: 32px;
-    border: 1px solid #888;
-    width: 50%;
-    height: 40%;
-    color: black;
+  position: relative;
+  top: 30%;
+  width: 35%;
+  margin: 8px;
+  border-radius: 25px;
 }
 
 .modal-trap-content,
-.modal-advantage-content{
-    background-color: #ededed;
-    margin: 80px auto;
-    padding: 32px;
-    border: 1px solid #888;
-    width: 40%;
-    height: 30%;
-    color: black;
+.modal-advantage-content,
+.modal-content {
+  background-color: #ededed;
+  margin: 80px auto;
+  padding: 32px;
+  border: 1px solid #3d3d3d;
+  color: #000000;
 }
 
-.modal-trap-content h4,
-.modal-advantage-content h4{
-    font-size: 1.6rem;
+.modal-content {
+  width: 50%;
+  height: 30%;
 }
 
-.modal-trap-content p,
-.modal-advantage-content p{
-    font-size: 1.4rem;
+.modal-trap-content,
+.modal-advantage-content {
+  width: 40%;
+  height: 25%;
 }
 
-
-
-.btn-blue{
-    float: right;
-    width: 30%;
-    margin-top: 32px;
-    padding: 8px;
-    color: #ededed;
-    background-color: #29527a;
-    border: none;
-}
-
-
-
-.none{
-    display: none;
+.btn-blue {
+  float: right;
+  width: 30%;
+  margin-top: 32px;
+  padding: 8px;
+  color: #ededed;
+  background-color: #29527a;
+  border: none;
 }

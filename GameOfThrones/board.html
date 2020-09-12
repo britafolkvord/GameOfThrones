@@ -1,72 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="Start playing the game" />
+    <title>Game Of Traps</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/board.css" />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Start playing the game">
-    <title>Game Of Thrones And Traps</title>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/board.css">
-
-</head>
-
-<body>
-
+  <body>
     <div class="modal">
-        <div class="modal-content">
-            <button class="close">&times;</button>
-            <h2>How to play</h2>
-            <p>Take turns rolling the dice, and your token will be moved across the board accordingly. If you roll a
-                six
-                you will get to go again.
-                There will be a few surprises hiding along the way. First player to get across
-                and reach the final tile wil be crowned the winner.
-            </p>
-            <button class="btn-play">Let's play!</button>
-        </div>
+      <div class="modal-content">
+        <button class="close">&times;</button>
+        <h2>How to play</h2>
+        <p>
+          Take turns rolling the dice, and your token will be moved across the
+          board accordingly. If you roll a six you will get to go again. There
+          will be a few surprises hiding along the way. First player to get
+          across and reach the final tile wil be crowned the winner.
+        </p>
+        <button class="btn-play">Let's play!</button>
+      </div>
     </div>
 
     <header>
-        <h1>Game of Traps</h1>
+      <h1>Game of Traps</h1>
     </header>
 
     <main>
-
-
-        <div class="player1">
-            <div class="p1-character"></div>
-            <div class="p1-rollDice">
-                <img src="img/d1.png" alt="roll: 1" id="p1-dice">
-                <button id="p1-roll">Roll Dice</button>
-            </div>
+      <div class="player1">
+        <div class="p1-character"></div>
+        <div class="p1-rollDice">
+          <img src="img/d1.png" alt="roll: 1" id="p1-dice" />
+          <button id="p1-roll">Roll Dice</button>
         </div>
+      </div>
 
+      <div class="board"></div>
 
-        <div class="board">
-
+      <div class="player2">
+        <div class="p2-character"></div>
+        <div class="p2-rollDice">
+          <img src="img/d1.png" alt="roll: 1" id="p2-dice" />
+          <button id="p2-roll">Roll Dice</button>
         </div>
-
-
-        <div class="player2">
-            <div class="p2-character"></div>
-            <div class="p2-rollDice">
-                <img src="img/d1.png" alt="roll: 1" id="p2-dice">
-                <button id="p2-roll">Roll Dice</button>
-            </div>
-        </div>
-
+      </div>
     </main>
 
-
-
-
     <footer>
-        <h5>© 2020 Game of Traps</h5>
+      <p>© 2020 Game of Traps</p>
     </footer>
     <script src="script/board.js"></script>
-</body>
-
+  </body>
 </html>
