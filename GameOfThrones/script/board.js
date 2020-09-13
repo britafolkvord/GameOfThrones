@@ -8,7 +8,7 @@ let p2CurrentPosition = 1;
 let playerTurn = 1;
 
 document.querySelector(".btn-play").focus();
-document.querySelectorAll(".close, .btn-play").forEach(function (el) {
+document.querySelectorAll(".close, .btn-play").forEach((el) => {
   el.addEventListener("click", () => closeModal(modal));
 });
 
@@ -251,7 +251,7 @@ function makeTraps(playerPosition, token) {
   document
     .querySelector(`.tile[data-number="${playerPosition}"]`)
     .append(token);
-  document.querySelectorAll(".close, .btn-blue").forEach(function (el) {
+  document.querySelectorAll(".close, .btn-blue").forEach((el) => {
     el.addEventListener("click", () => closeModal(modal));
   });
 }
@@ -288,7 +288,7 @@ function makeAdvantage(playerPosition, token) {
   document
     .querySelector(`.tile[data-number="${playerPosition}"]`)
     .append(token);
-  document.querySelectorAll(".close, .btn-blue").forEach(function (el) {
+  document.querySelectorAll(".close, .btn-blue").forEach((el) => {
     el.addEventListener("click", () => closeModal(modal));
   });
 }

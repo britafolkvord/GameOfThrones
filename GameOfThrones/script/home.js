@@ -17,7 +17,7 @@ async function getCaracters() {
 }
 
 function makeAndDisplayCards(characters) {
-  characters.forEach(function (character) {
+  characters.forEach((character) => {
     let card = createCard(character);
     cardsContainer.appendChild(card);
     card.addEventListener("click", () => displayInfo(character, characters));
