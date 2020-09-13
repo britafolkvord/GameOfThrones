@@ -25,8 +25,9 @@ function checkForCharacters() {
       You need to select characters to be able to play. Please return back to the
       home page and make your selections.
     </p>
+    <div class="modal-btn">
     <a href="home.html" class="btn-back">Go back</a>
-    
+    </div>
         `;
     document.querySelector(".btn-back").focus();
   }
@@ -197,7 +198,9 @@ function makeTraps(playerPosition, token) {
     <p>
       Take two steps back to get to safety, and wait for the boar to disappear
     </p>
+    <div class="modal-btn">
     <button class="btn-blue">Okay</button>
+  </div>
   </div>
   
         `;
@@ -208,7 +211,9 @@ function makeTraps(playerPosition, token) {
     <button class="close">&times;</button>
     <h4>One of the Warlocks of Qarth put a spell on you!</h4>
     <p>This spell causes you to take three steps backwards</p>
+    <div class="modal-btn">
     <button class="btn-blue">Okay</button>
+  </div>
   </div>
   
         `;
@@ -219,7 +224,9 @@ function makeTraps(playerPosition, token) {
     <button class="close">&times;</button>
     <h4>Daenerys' dragon is hunting on the road ahead!</h4>
     <p>Take 4 steps back to seek shelter</p>
+    <div class="modal-btn">
     <button class="btn-blue">Okay</button>
+  </div>
   </div>
   
         `;
@@ -230,7 +237,9 @@ function makeTraps(playerPosition, token) {
     <button class="close">&times;</button>
     <h4>The Mountain is patrolling the road ahead!</h4>
     <p>Take 2 steps back to avoid capture</p>
+    <div class="modal-btn">
     <button class="btn-blue">Okay</button>
+  </div>
   </div>
   
         `;
@@ -241,7 +250,9 @@ function makeTraps(playerPosition, token) {
     <button class="close">&times;</button>
     <h4>White Walkers approaching!</h4>
     <p>Take 4 steps back to seek shelter</p>
+    <div class="modal-btn">
     <button class="btn-blue">Okay</button>
+  </div>
   </div>
   
         `;
@@ -266,7 +277,9 @@ function makeAdvantage(playerPosition, token) {
     <button class="close">&times;</button>
     <h4>Daenerys comes and gives you a ride on Drogon!</h4>
     <p>Move two tiles forwards</p>
+    <div class="modal-btn">
     <button class="btn-blue">Let's go</button>
+  </div>
   </div>
   
         `;
@@ -277,7 +290,9 @@ function makeAdvantage(playerPosition, token) {
     <button class="close">&times;</button>
     <h4>The Three Eyed Raven tells you about a secret path!</h4>
     <p>This path is a lot quicker. Move 3 tiles forwards</p>
+    <div class="modal-btn">
     <button class="btn-blue">Let's go</button>
+  </div>
   </div>
   
     `;

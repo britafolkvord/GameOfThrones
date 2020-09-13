@@ -41,6 +41,12 @@ main {
   background-color: #ededed;
 }
 
+.modal-btn{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
 button {
   width: 40%;
   padding: 16px;
@@ -50,9 +56,8 @@ button {
 
 .btn-play,
 .btn-back {
-  float: right;
   color: #ededed;
-  margin: 16px auto;
+  margin: 0;
   background-color: #29527a;
 }
 
@@ -119,19 +124,16 @@ button {
 
 .modal-content {
   width: 50%;
-  height: 30%;
 }
 
 .modal-trap-content,
 .modal-advantage-content {
   width: 40%;
-  height: 25%;
 }
 
 .btn-blue {
-  float: right;
   width: 30%;
-  margin-top: 32px;
+  margin: 0;
   padding: 8px;
   color: #ededed;
   background-color: #29527a;

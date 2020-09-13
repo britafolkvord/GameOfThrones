@@ -5,7 +5,7 @@ getCaracters();
 
 async function getCaracters() {
   try {
-    const response = await fetch("/script/characters.json").then((r) =>
+    const response = await fetch("./script/characters.json").then((r) =>
       r.json()
     );
     const characters = response.data;

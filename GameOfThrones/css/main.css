@@ -1,7 +1,7 @@
 /*Global styles */
 @font-face {
   font-family: "game-of-thrones";
-  src: url("/font/Game\ of\ Thrones.ttf");
+  src: url("../font/gameofthrones.ttf");
 }
 
 html,
@@ -11,7 +11,7 @@ body {
 }
 
 body {
-  background-image: url(/img/crows.jpeg);
+  background-image: url(../img/crows.jpeg);
   background-size: cover;
   color: #ededed;
   font-family: "Crimson Text", serif;

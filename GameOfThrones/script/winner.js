@@ -23,7 +23,7 @@ tl.add({
   .add(
     {
       targets: "h1",
-      translateY: "-200%",
+      translateY: "-50%",
       opacity: 1,
       duration: 5000,
     },
@@ -32,7 +32,7 @@ tl.add({
   .add(
     {
       targets: "a",
-      translateY: "500%",
+      translateY: "550%",
       opacity: 1,
       duration: 5000,
     },
