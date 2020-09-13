@@ -90,7 +90,6 @@ function closeModal(modal) {
 function clearSelectedCharacters() {
   p2 = undefined;
   p1 = undefined;
-  localStorage.clear();
   document.querySelector(".playerTurn").innerHTML =
     "Player 1 select your character";
   document.querySelector(".summary").innerHTML = "";
@@ -122,7 +121,6 @@ function selectCharacter(e, characters) {
     <button class="btn-blue">Clear selection</button>
     <a href="board.html" class="btn-light">Start playing</a>
   </div>`;
-    document.getElementById(`${p2}`).disabled = true;
     const cards = document.querySelectorAll(".card");
     cards.forEach((card) => (card.disabled = true));
     document.querySelector(".btn-light").focus();

@@ -26,7 +26,7 @@ function checkForCharacters() {
       home page and make your selections.
     </p>
     <div class="modal-btn">
-    <a href="home.html" class="btn-back">Go back</a>
+    <a href="index.html" class="btn-back">Go back</a>
     </div>
         `;
     document.querySelector(".btn-back").focus();
@@ -148,6 +148,12 @@ function rollDice(playerDice) {
       } else {
         p2button.focus();
       }
+    }else{
+      if (modalIsOpen) {
+        document.querySelector(".btn-blue").focus();
+      } else {
+        p2button.focus();
+      }
     }
   } else {
     p2CurrentPosition = p2CurrentPosition + randomNumber;
@@ -176,6 +182,12 @@ function rollDice(playerDice) {
         playerTurn = 1;
         p1button.disabled = false;
         p2button.disabled = true;
+        if (modalIsOpen) {
+          document.querySelector(".btn-blue").focus();
+        } else {
+          p1button.focus();
+        }
+      }else{
         if (modalIsOpen) {
           document.querySelector(".btn-blue").focus();
         } else {

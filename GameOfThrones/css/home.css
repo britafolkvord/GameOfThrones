@@ -155,7 +155,6 @@
 
   .modal-character-content {
     width: 90%;
-    height: 60%;
     margin-top: 48px;
   }
 
@@ -212,7 +211,6 @@
 
   .modal-character-content {
     width: 50%;
-    height: 50%;
     margin: 80px auto;
   }
 
@@ -241,7 +239,7 @@
 
   .btn-select {
     width: 30%;
-    margin-top: 48px;
+    margin: 8px 0;
   }
   .cards {
     width: 85%;
