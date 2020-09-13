@@ -1,19 +1,19 @@
 const cardsContainer = document.querySelector(".cards");
-let selecting = "p1";
 let p1;
 let p2;
 getCaracters();
 
 async function getCaracters() {
   try {
-    cardsContainer.innerHTML = `<div class="loader"></div>`;
     const response = await fetch("/script/characters.json").then((r) =>
       r.json()
     );
     const characters = response.data;
-    cardsContainer.innerHTML = "";
     makeAndDisplayCards(characters);
-  } catch (error) {}
+    document.querySelector(".loader").remove();
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 function makeAndDisplayCards(characters) {
@@ -29,12 +29,12 @@ function createCard(character) {
   el.classList.add("card");
   el.id = character.name;
   el.innerHTML = `
-        <div class="img">
-            <img src="${character.img}" alt="${character.name}">
-        </div>
-        <div class="name">
-        <h4>${character.name}</h4>
-        </div>
+  <div class="img">
+  <img src="${character.img}" alt="${character.name}" />
+</div>
+<div class="name">
+  <h4>${character.name}</h4>
+</div>
 `;
   return el;
 }
@@ -43,59 +43,54 @@ function displayInfo(card, characters) {
   let modal = document.createElement("div");
   modal.classList.add("modal");
   modal.innerHTML = `
-        <div class="modal-character-content">
-        <button class="close">&times;</button>
-        <div class="col">
-        <div class="col-1">
-        <img src="${card.img}" alt="${card.name}">
-        </div>
-        <div class="col-2">
-        <h4>${card.name}</h4>
-        <div class="born">
+  <div class="modal-character-content">
+  <button class="close">&times;</button>
+  <div class="col">
+    <div class="col-1">
+      <img src="${card.img}" alt="${card.name}" />
+    </div>
+    <div class="col-2">
+      <h4>${card.name}</h4>
+      <div class="born">
         <h5>Born :</h5>
         <p>${card.born}</p>
-    </div>
-    <div class="culture">
+      </div>
+      <div class="culture">
         <h5>Culture :</h5>
         <p>${card.culture}</p>
-    </div>
-    <div class="titles">
+      </div>
+      <div class="titles">
         <h5>Titles:</h5>
         <p>${card.titles}</p>
+      </div>
     </div>
-    </div>
-    </div>
-    <div class="select">
-    <button class="btn-select" data-card-id="${card.name}">Select Character</button>
-    </div>
-    </div>
+  </div>
+  <div class="select">
+    <button class="btn-select" data-card-id="${card.name}">
+      Select Character
+    </button>
+  </div>
+</div>
         `;
   document.querySelector("body").appendChild(modal);
-  document.querySelectorAll(".btn-select").forEach(function (el) {
-    el.focus();
-  });
+  document.querySelector(".btn-select").focus();
   document
     .querySelector(".close")
     .addEventListener("click", () => closeModal(modal));
-  document
-    .querySelector(".btn-select")
-    .addEventListener("click", (e) => selectCharacter(e, modal, characters));
+  document.querySelector(".btn-select").addEventListener("click", (e) => {
+    selectCharacter(e, characters);
+    closeModal(modal);
+  });
 }
 
 function closeModal(modal) {
   modal.remove();
 }
 
-function clearCharacters(p1Character, p2Character) {
-  document.getElementById(`${p1Character}`).disabled = false;
-  document.getElementById(`${p2Character}`).disabled = false;
-  p1Character = undefined;
-  p2Character = undefined;
+function clearSelectedCharacters() {
   p2 = undefined;
   p1 = undefined;
   localStorage.clear();
-  console.log(p1Character);
-  console.log(p2Character);
   document.querySelector(".playerTurn").innerHTML =
     "Player 1 select your character";
   document.querySelector(".summary").innerHTML = "";
@@ -104,45 +99,46 @@ function clearCharacters(p1Character, p2Character) {
   cards.forEach((card) => (card.disabled = false));
 }
 
-function selectCharacter(e, modal, characters) {
-  let firstCardSelected = e.target.dataset.cardId;
+function selectCharacter(e, characters) {
+  let selected = e.target.dataset.cardId;
   if (!p1) {
     document.querySelector(".playerTurn").innerHTML =
       "Player 2 select your character";
     document.querySelector(
       ".summary"
-    ).innerHTML = `<p>Player 1 has selected ${firstCardSelected}</p>`;
+    ).innerHTML = `<p>Player 1 has selected ${selected}</p>`;
     document.querySelector(".summary").classList.add("padding");
-    document.getElementById(`${firstCardSelected}`).disabled = true;
-    p1 = firstCardSelected;
+    document.getElementById(`${selected}`).disabled = true;
+    p1 = selected;
   } else if (!p2) {
-    let secondCardSelected = e.target.dataset.cardId;
+    let selected = e.target.dataset.cardId;
+    p2 = selected;
     document.querySelector(".playerTurn").innerHTML = "";
     document.querySelector(".summary").innerHTML = `
-            <p>Player 1 has selected ${p1} and Player 2 has selected ${secondCardSelected}</p>
-            <div class="btn-row">
-            <button class="btn-blue">Clear selection</button> 
-            <a href="board.html" class="btn-light">Start playing</a>
-            </div>`;
-    document.getElementById(`${secondCardSelected}`).disabled = true;
+    <p>
+    Player 1 has selected ${p1} and Player 2 has selected ${p2}
+  </p>
+  <div class="btn-row">
+    <button class="btn-blue">Clear selection</button>
+    <a href="board.html" class="btn-light">Start playing</a>
+  </div>`;
+    document.getElementById(`${p2}`).disabled = true;
     const cards = document.querySelectorAll(".card");
     cards.forEach((card) => (card.disabled = true));
     document.querySelector(".btn-light").focus();
-    sendCharactersToBoard(p1, secondCardSelected, characters);
+    saveSelectedCharacters(characters);
     document
       .querySelector(".btn-blue")
-      .addEventListener("click", () => clearCharacters(p1, secondCardSelected));
+      .addEventListener("click", () => clearSelectedCharacters());
   }
-
-  closeModal(modal);
 }
 
-function sendCharactersToBoard(p1Character, p2Character, characters) {
-  const p1 = characters.find((character) => p1Character === character.name);
-  const p2 = characters.find((character) => p2Character === character.name);
+function saveSelectedCharacters(allCharacters) {
+  const character1 = allCharacters.find((character) => p1 === character.name);
+  const character2 = allCharacters.find((character) => p2 === character.name);
 
-  const p1json = JSON.stringify(p1);
-  const p2json = JSON.stringify(p2);
+  const p1json = JSON.stringify(character1);
+  const p2json = JSON.stringify(character2);
   localStorage.player1 = p1json;
   localStorage.player2 = p2json;
 }

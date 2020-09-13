@@ -48,11 +48,18 @@ button {
   margin: 0 auto;
 }
 
-.btn-play {
+.btn-play,
+.btn-back {
   float: right;
   color: #ededed;
   margin: 16px auto;
   background-color: #29527a;
+}
+
+.btn-back {
+  text-decoration: none;
+  padding: 16px;
+  border-radius: 25px;
 }
 
 .board {

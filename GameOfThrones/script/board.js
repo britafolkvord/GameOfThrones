@@ -3,20 +3,37 @@ const player2Character = localStorage.getItem("player2");
 const p1Obj = JSON.parse(player1Character);
 const p2Obj = JSON.parse(player2Character);
 let modal = document.querySelector(".modal");
+let p1CurrentPosition = 1;
+let p2CurrentPosition = 1;
+let playerTurn = 1;
+
 document.querySelector(".btn-play").focus();
 document.querySelectorAll(".close, .btn-play").forEach(function (el) {
   el.addEventListener("click", () => closeModal(modal));
 });
-const boardElement = document.querySelector(".board");
-let p1CurrentPosition = 1;
-let p2CurrentPosition = 1;
-let playerTurn = 1;
-let p1token;
-let p2token;
+
+checkForCharacters();
 createBoard();
 displayCharacters();
 
+function checkForCharacters() {
+  if (player1Character === null || player2Character === null) {
+    document.querySelector(".modal-content").innerHTML = `
+    <button class="close">&times;</button>
+    <h2>How to play</h2>
+    <p>
+      You need to select characters to be able to play. Please return back to the
+      home page and make your selections.
+    </p>
+    <a href="home.html" class="btn-back">Go back</a>
+    
+        `;
+    document.querySelector(".btn-back").focus();
+  }
+}
+
 function createBoard() {
+  const boardElement = document.querySelector(".board");
   for (let row = 0; row < 5; row++) {
     const rowElement = document.createElement("div");
     rowElement.classList.add("row");
@@ -54,15 +71,16 @@ function displayCharacters() {
     `;
 
   document.querySelector('.tile[data-number="1"]').innerHTML = `
-    <div class="startTile">
-    <h3>Start</h3>
-    <img src="${p1Obj.sigil}" alt="${p1Obj.name}" class="p1token">
-    <img src="${p2Obj.sigil}" alt="${p2Obj.name}" class="p2token">
-    </div>
+  <div>
+  <h3>Start</h3>
+  <img src="${p1Obj.sigil}" alt="${p1Obj.name}" class="p1token" />
+  <img src="${p2Obj.sigil}" alt="${p2Obj.name}" class="p2token" />
+</div>
+
     `;
 
   document.querySelector('.tile[data-number="30"]').innerHTML = `
-    <div class="startTile">
+    <div>
     <h3>Finish</h3>
     </div>
     `;
@@ -173,52 +191,59 @@ function makeTraps(playerPosition, token) {
   modal.classList.add("modal");
   if (trapNumber === 1) {
     modal.innerHTML = `
-        <div class="modal-trap-content">
-        <button class="close">&times;</button>
-        <h4>A wild boar blocks your path!</h4>
-        <p>Take two steps back to get to safety, and wait for the boar to disappear</p>
-        <button class="btn-blue">Okay</button>
-    </div>
+    <div class="modal-trap-content">
+    <button class="close">&times;</button>
+    <h4>A wild boar blocks your path!</h4>
+    <p>
+      Take two steps back to get to safety, and wait for the boar to disappear
+    </p>
+    <button class="btn-blue">Okay</button>
+  </div>
+  
         `;
     playerPosition = playerPosition - 2;
   } else if (trapNumber === 2) {
     modal.innerHTML = `
-        <div class="modal-trap-content">
-        <button class="close">&times;</button>
-        <h4>One of the Warlocks of Qarth put a spell on you!</h4>
-        <p>This spell causes you to take three steps backwards</p>
-        <button class="btn-blue">Okay</button>
-    </div>
+    <div class="modal-trap-content">
+    <button class="close">&times;</button>
+    <h4>One of the Warlocks of Qarth put a spell on you!</h4>
+    <p>This spell causes you to take three steps backwards</p>
+    <button class="btn-blue">Okay</button>
+  </div>
+  
         `;
     playerPosition = playerPosition - 3;
   } else if (trapNumber === 3) {
     modal.innerHTML = `
-        <div class="modal-trap-content">
-        <button class="close">&times;</button>
-        <h4>Daenerys' dragon is hunting on the road ahead!</h4>
-        <p>Take 4 steps back to seek shelter</p>
-        <button class="btn-blue">Okay</button>
-    </div>
+    <div class="modal-trap-content">
+    <button class="close">&times;</button>
+    <h4>Daenerys' dragon is hunting on the road ahead!</h4>
+    <p>Take 4 steps back to seek shelter</p>
+    <button class="btn-blue">Okay</button>
+  </div>
+  
         `;
     playerPosition = playerPosition - 4;
   } else if (trapNumber === 4) {
     modal.innerHTML = `
-        <div class="modal-trap-content">
-        <button class="close">&times;</button>
-        <h4>The Mountain is patrolling the road ahead!</h4>
-        <p>Take 2 steps back to avoid capture</p>
-        <button class="btn-blue">Okay</button>
-    </div>
+    <div class="modal-trap-content">
+    <button class="close">&times;</button>
+    <h4>The Mountain is patrolling the road ahead!</h4>
+    <p>Take 2 steps back to avoid capture</p>
+    <button class="btn-blue">Okay</button>
+  </div>
+  
         `;
     playerPosition = playerPosition - 2;
   } else if (trapNumber === 5) {
     modal.innerHTML = `
-        <div class="modal-trap-content">
-        <button class="close">&times;</button>
-        <h4>White Walkers approaching!</h4>
-        <p>Take 4 steps back to seek shelter</p>
-        <button class="btn-blue">Okay</button>
-    </div>
+    <div class="modal-trap-content">
+    <button class="close">&times;</button>
+    <h4>White Walkers approaching!</h4>
+    <p>Take 4 steps back to seek shelter</p>
+    <button class="btn-blue">Okay</button>
+  </div>
+  
         `;
     playerPosition = playerPosition - 4;
   }
@@ -237,12 +262,13 @@ function makeAdvantage(playerPosition, token) {
   modal.classList.add("modal");
   if (advantageNumber === 1) {
     modal.innerHTML = `
-        <div class="modal-advantage-content">
-        <button class="close">&times;</button>
-        <h4>Daenerys comes and gives you a ride on Drogon!</h4>
-        <p>Move two tiles forwards</p>
-        <button class="btn-blue">Let's go</button>
-    </div>
+    <div class="modal-advantage-content">
+    <button class="close">&times;</button>
+    <h4>Daenerys comes and gives you a ride on Drogon!</h4>
+    <p>Move two tiles forwards</p>
+    <button class="btn-blue">Let's go</button>
+  </div>
+  
         `;
     playerPosition = playerPosition + 2;
   } else {
@@ -252,7 +278,8 @@ function makeAdvantage(playerPosition, token) {
     <h4>The Three Eyed Raven tells you about a secret path!</h4>
     <p>This path is a lot quicker. Move 3 tiles forwards</p>
     <button class="btn-blue">Let's go</button>
-</div>
+  </div>
+  
     `;
     playerPosition = playerPosition + 3;
   }

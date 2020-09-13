@@ -110,6 +110,29 @@
   margin: 0 8px;
 }
 
+@keyframes loader {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loader:before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  margin-top: -10px;
+  margin-left: -10px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top-color: #394d71;
+  border-bottom-color: #394d71;
+  animation: loader 0.8s ease infinite;
+}
+
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .playerTurn {
     font-size: 2.5rem;

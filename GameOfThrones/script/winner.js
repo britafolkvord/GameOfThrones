@@ -5,19 +5,25 @@ let tl = anime.timeline({
 
 tl.add({
   targets: "section div",
-  width: "100%",
+  scaleX: "1",
   backgroundColor: "rgb(0, 0, 0)",
   delay: anime.stagger(100),
 })
   .add({
     targets: "section div",
-    width: "90%",
+    scaleX: ".975",
+    backgroundColor: "rgb(180 , 214, 239)",
+    delay: anime.stagger(100),
+  })
+  .add({
+    targets: "section div",
+    scaleX: ".90",
     backgroundColor: "rgb(159, 171, 181)",
   })
   .add(
     {
       targets: "h1",
-      top: "20%",
+      translateY: "-200%",
       opacity: 1,
       duration: 5000,
     },
@@ -26,7 +32,7 @@ tl.add({
   .add(
     {
       targets: "a",
-      top: "50%",
+      translateY: "500%",
       opacity: 1,
       duration: 5000,
     },
